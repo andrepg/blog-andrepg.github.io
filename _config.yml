@@ -1,0 +1,55 @@
+title: André Paul Grandsire
+email: aplg.projetos@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Comecei esse projeto para aprender algumas ferramentas úteis. Acumular conhecimento.
+  Esse site é construído em Jekyll, HTML, Sass & Markdown.
+  Resolvi criar um blog com as experiências ao longo do tempo também. Mais uma vez.
+  Dessa vez em Português, minha língua nativa, e habilitado para Google Tradutor.
+baseurl: "" # the subpath to our site
+url: "https://andrepg.github.io" # mail url of website @ github
+
+# Social networks and where find me
+twitter_username: anndrepaul
+github_username:  andrepg
+linkedin_username: andrepg
+freelancer_freelancer: '123'
+freelancer_99freelas: '123'
+
+## Site settings - Analytics
+google_analytics: UA-34405933-6
+markdown: kramdown
+rss: Feed RSS
+timezone: America/Argentina/Buenos_Aires
+destination: deployment
+source: src
+
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-target-blank
+
+# Default settings for website
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "main_layout"
+  -
+      scope:
+      path: "_pages"
+    values:
+      type: "pages"
+      permalink: /pages/:path/:basename
+      show_in_nav: true
+      layout: main_layout
+  -
+    scope:
+      path: "_posts"
+    values:
+      type: "posts"
+      permalink: /blog/:year/:month/:title
+      show_in_nav: false
+      layout: posts
