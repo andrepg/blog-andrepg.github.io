@@ -1,0 +1,4 @@
+<script type="text/javascript" src="{{ '/assets/js/app.js' | relative_url }}"></script>
+{% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include google-analytics.html %}
+{% endif %}

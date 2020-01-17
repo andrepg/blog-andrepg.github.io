@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="homepage-container">
+    <!-- Begin post loop if has more than 0 -->
+    {%- if site.posts.size > 0 -%}
+        <h2 class="homepage-post-container-title">Publicações</h2>
+
+        <ul class="homepage-post-listage">
+            {%- for post in site.posts -%}
+                <li class="homepage-post-item">
+                    {%- assign date_format = site.settings.date_format -%}
+                    <span class="homepage-post-meta"></span>
+
+                    <a class="homepage-post-link" href="{{ post.url | relative_url }}">
+                        <h3>{{ post.title | escape }}</h3>
+                    </a>
+
+                    {%- if site.show_excerpts -%}
+                        <p class="homepage=post-excerpt">{{ post.excerpt }}</p>
+                    {%- endif -%}
+                </li>
+            {%- endfor -%}
+        </ul>
+    {%- endif -%}
+</section>
