@@ -1,28 +1,31 @@
 title: André Paul Grandsire
 email: aplg.projetos@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Comecei esse projeto para aprender algumas ferramentas úteis. Acumular conhecimento.
-  Esse site é construído em Jekyll, HTML, Sass & Markdown.
-  Resolvi criar um blog com as experiências ao longo do tempo também. Mais uma vez.
-  Dessa vez em Português, minha língua nativa, e habilitado para Google Tradutor.
+description: Um simples blog & cartão de visita
+personal_description: >- # this means to ignore newlines until "baseurl:"
+  <p>Comecei esse projeto para aprender algumas ferramentas úteis e acumular conhecimento.
+  Esse site é construído em Jekyll, HTML, Sass & Markdown.</p>
+  <p>Resolvi criar um blog com as experiências ao longo do tempo também. Mais uma vez.
+  Dessa vez em Português, minha língua nativa.</p>
 baseurl: "" # the subpath to our site
-url: "https://andrepg.github.io" # mail url of website @ github
+url: "https://andrepg.github.io" # main url of website @ github
 
 # Social networks and where find me
-twitter_username: anndrepaul
-github_username:  andrepg
-linkedin_username: andrepg
-freelancer_freelancer: '123'
-freelancer_99freelas: '123'
+social_media:
+  twitter: anndrepaul
+  github:  andrepg
+  linkedin: andrepg
+  freelancer: andrepaulg
+  stackoverflow: 4252460
 
 ## Site settings - Analytics
 google_analytics: UA-34405933-6
 markdown: kramdown
 rss: Feed RSS
 timezone: America/Argentina/Buenos_Aires
+date_format: "%D %m %y"
 destination: deployment
 source: src
-
+include: ['_pages']
 
 # Build settings
 theme: minima
@@ -32,24 +35,11 @@ plugins:
 
 # Default settings for website
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
-      layout: "main_layout"
-  -
-      scope:
+      layout: default
+  - scope:
       path: "_pages"
     values:
-      type: "pages"
-      permalink: /pages/:path/:basename
-      show_in_nav: true
-      layout: main_layout
-  -
-    scope:
-      path: "_posts"
-    values:
-      type: "posts"
-      permalink: /blog/:year/:month/:title
-      show_in_nav: false
-      layout: posts
+      permalink: '/pages/:basename'
