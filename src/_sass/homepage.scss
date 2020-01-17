@@ -1,0 +1,28 @@
+/**
+* Default homepage style for any devices
+*/
+.homepage-container {
+  display: inline-block;
+  position: relative;
+  max-width: 70%;
+  margin: 0 0px 0 20px;
+
+  .homepage-post-container-title {
+  }
+
+  .homepage-post-listage {
+    .homepage-post-item {
+      list-style-type: none;
+    }
+
+    .homepage-post-meta {
+    }
+
+    .homepage-post-link {
+      text-decoration: none;
+    }
+
+    .homepage-post-excerpt {
+    }
+  }
+}

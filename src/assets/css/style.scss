@@ -3,5 +3,9 @@
 # the style.scss into a css file
 ---
 
+@import "variables";
+@import "fonts_and_typo";
 @import "main-style";
-@import "typography";
+@import "sidebar";
+@import "homepage";
+@import "navigation";

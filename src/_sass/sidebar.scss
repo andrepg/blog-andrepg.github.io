@@ -1,0 +1,150 @@
+/**
+* Sidebar style for any devices
+*/
+
+.sidebar {
+  background-color: $color-sidebar-background;
+  z-index: 1;
+  float: left;
+
+  &::before {
+    background-image: $color-sidebar-background-image;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.4);
+  }
+}
+
+@media screen and (min-width: $media-desktop) {
+  .sidebar {
+    min-height: 100%;
+    position: relative;
+
+    width: 25%;
+    max-width: 500px;
+    min-width: 200px;
+
+    display: inline-block;
+    padding: 0px 20px;
+    color: $color-text-inverted;
+
+    .sidebar-profile {
+      padding-top: 45px;
+      width: 100%;
+
+      .sidebar-profile-image {
+        width: 100%;
+        align-content: center;
+        text-align: center;
+
+        img {
+          width: 100px;
+          border-radius: 50px;
+          box-shadow: 5px 5px 10px -7px white;
+          border: $color-sidebar-background;
+        }
+      }
+
+      .sidebar-profile-name {
+        width: 100%;
+        display: block;
+        padding: 15px 0;
+        font-size: $font-size-title-name;
+      }
+
+      .sidebar-profile-description {
+        &::before {
+          content: "About me";
+        }
+
+        width: 100%;
+        font-size: 0.8em;
+
+        p {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+
+    .sidebar-links {
+      font-size: 0.8em;
+      margin-top: 15px;
+
+      &::before {
+        content: "Social Media";
+      }
+
+      ul li {
+        list-style: none;
+        vertical-align: middle;
+        line-height: 2em;
+        display: inline-block;
+        margin-right: 10px;
+        color: $color-sidebar-link;
+        filter: opacity(0.5);
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          transition: 0.3s ease-in-out;
+          filter: opacity(1);
+
+          a {
+            color: $color-sidebar-link;
+            transition: 0.3s ease-in-out;
+          }
+        }
+
+        a {
+          transition: 0.3s ease-in-out;
+          text-decoration: none;
+          color: $color-text-inverted;
+        }
+
+        .svg-icon {
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+          fill: $color-text-inverted;
+          vertical-align: middle;
+          padding-right: 3px;
+          line-height: 2em;
+        }
+      }
+    }
+
+    .sidebar-links::before,
+    .sidebar-profile-description::before,
+    .sidebar-copyright-links::before {
+      display: block;
+      border-left: 1px solid white;
+      padding: 5px 0px 5px 5px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-copyright-links {
+      margin-top: 15px;
+      z-index: 1;
+      position: relative;
+
+      &::before {
+        content: "Development";
+      }
+
+      font-size: 0.8em;
+      color: $color-text-inverted;
+
+      a {
+        text-decoration: none;
+        color: $color-sidebar-link;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

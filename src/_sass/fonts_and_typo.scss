@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap");
+
+$font-title: "Source Sans Pro", sans-serif;
+$font-text: "Open Sans", sans-serif;
+
+body {
+  font-family: $font-text;
+  font-size: $font-size-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sidebar-profile-name,
+.nav-general {
+  font-family: $font-title;
+}
