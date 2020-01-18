@@ -3,25 +3,27 @@ layout: default
 ---
 
 <section class="homepage-container">
-    <!-- Begin post loop if has more than 0 -->
-    {%- if site.posts.size > 0 -%}
-        <h2 class="homepage-post-container-title">Publicações</h2>
+  <!-- Begin post loop if has more than 0 -->
+  {%- if site.posts.size > 0 -%}
+    <h2 class="homepage-post-container-title">Publicações</h2>
 
-        <ul class="homepage-post-listage">
-            {%- for post in site.posts -%}
-                <li class="homepage-post-item">
-                    {%- assign date_format = site.settings.date_format -%}
-                    <span class="homepage-post-meta"></span>
+    <ul class="homepage-post-listage">
+      {%- for post in site.posts -%}
+        <li class="homepage-post-item">
+          {%- assign date_format = site.date_format -%}
+          <a class="homepage-post-link homepage-post-title" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
 
-                    <a class="homepage-post-link" href="{{ post.url | relative_url }}">
-                        <h3>{{ post.title | escape }}</h3>
-                    </a>
+            <br/>
+            <span class="homepage-post-meta">Publicado em:
+              {{ post.date | date: date_format }}</span>
 
-                    {%- if site.show_excerpts -%}
-                        <p class="homepage=post-excerpt">{{ post.excerpt }}</p>
-                    {%- endif -%}
-                </li>
-            {%- endfor -%}
-        </ul>
-    {%- endif -%}
+            {%- if site.show_excerpts -%}
+              <p class="homepage=post-excerpt">{{ post.excerpt }}</p>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 </section>

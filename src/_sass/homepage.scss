@@ -2,27 +2,45 @@
 * Default homepage style for any devices
 */
 .homepage-container {
-  display: inline-block;
-  position: relative;
-  max-width: 70%;
-  margin: 0 0px 0 20px;
-
-  .homepage-post-container-title {
+  @media screen and (min-width: $media-desktop) {
+    width: 70%;
   }
 
+  display: inline-block;
+  position: relative;
+  margin: 10px 0px 0 20px;
+
   .homepage-post-listage {
+    margin-top: 15px;
+
     .homepage-post-item {
       list-style-type: none;
-    }
+      width: 100%;
+      min-height: 70px;
+      display: inline-block;
+      filter: opacity(0.8);
+      transition: 0.3s ease-in-out;
 
-    .homepage-post-meta {
-    }
+      &:hover {
+        filter: opacity(1);
+        transition: 0.3s ease-in-out;
+      }
 
-    .homepage-post-link {
-      text-decoration: none;
-    }
+      .homepage-post-title {
+        font-size: 1.2em;
+        width: 100%;
+        display: block;
+      }
 
-    .homepage-post-excerpt {
+      .homepage-post-link {
+        text-decoration: none;
+      }
     }
+  }
+
+  .homepage-post-meta {
+    font-size: 0.8em;
+    width: 100%;
+    color: gray;
   }
 }

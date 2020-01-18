@@ -25,39 +25,36 @@ body {
 }
 
 /**
-* Grid system for mobile and desktop
-*/
-@media screen and (max-width: $media-mobile) {
-  body {
-    .sidebar {
-    }
-
-    .homepage-container {
-    }
-
-    .post-container {
-    }
-
-    .page-container {
-    }
-
-    .portfolio-container {
-    }
-  }
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+  margin-bottom: 15px;
 }
 
-@media screen and (min-width: $media-desktop) {
-  body {
-    .homepage-container {
-    }
+.post {
+  display: inline-block;
+  width: 70%;
+  margin-left: 15px;
+  position: relative;
+}
 
-    .post-container {
-    }
+.container {
+  display: inline;
+}
 
-    .page-container {
-    }
-
-    .portfolio-container {
-    }
-  }
+.post-meta {
+  display: none !important;
 }
