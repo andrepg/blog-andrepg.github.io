@@ -22,7 +22,7 @@ google_analytics: UA-34405933-6
 markdown: kramdown
 rss: Feed RSS
 timezone: America/Argentina/Buenos_Aires
-date_format: "%D %m %y"
+date_format: "%d/%m/%Y"
 destination: deployment
 source: src
 include: ['_pages']
@@ -39,6 +39,10 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "_posts"
+    values:
+      permalink: "/:year/:month/:title"
   - scope:
       path: "_pages"
     values:
