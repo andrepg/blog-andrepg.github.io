@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - id: andrepgblog-build-jekyll
+      name: GHA Jekyll Build
+      uses: gha-utilities/jekyll-build@v0.0.2
+      with:
+        # Relative path that source files for Jekyll to build exsist
+        source: src
+        # Path where compiled site files should be saved to
+        destination: deployment
+    
+    - uses: actions/checkout@master
+    - name: publish:starters
+      uses: johno/actions-push-subdirectories@master
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: deployment andrepg andrepg.github.io
