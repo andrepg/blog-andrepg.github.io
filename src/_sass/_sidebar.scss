@@ -1,0 +1,58 @@
+#sidebar {
+  @media screen and (max-width: $media-desktop) {
+    display: none;
+  }
+
+  padding: 15px 0px 0 15px;
+  background: $color-sidebar-background;
+  color: $color-text-inverted;
+
+  .sidebar-profile-image img {
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+    display: block;
+  }
+
+  .sidebar-profile-name {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .sidebar-profile-description {
+    p {
+      margin: 0;
+    }
+  }
+
+  .sidebar-links {
+    ul {
+      list-style: none;
+    }
+
+    .sidebar-links-item {
+      a {
+        color: $color-sidebar-link;
+        text-decoration: none;
+      }
+
+      svg {
+        fill: $color-text-inverted;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .sidebar-copyright-links {
+    a {
+      color: $color-sidebar-link;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 5px 0 5px 0;
+    }
+  }
+}
