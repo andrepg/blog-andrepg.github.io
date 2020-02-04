@@ -26,6 +26,7 @@ date_format: "%d/%m/%Y"
 destination: deployment
 source: src
 include: ['_pages']
+exclude: ['*.backup']
 
 # Build settings
 theme: minima
@@ -42,7 +43,7 @@ defaults:
   - scope:
       path: "_posts"
     values:
-      permalink: "/:year/:month/:title"
+      permalink: "/blog/:year/:month/:title"
   - scope:
       path: "_pages"
     values:
