@@ -9,37 +9,6 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: $media-desktop) {
-  html {
-    overflow: hidden;
-  }
-
-  body {
-    display: grid;
-    grid-template-rows: 50px auto;
-    grid-template-columns: 25% 74%;
-    grid-template-areas:
-      "sidebar mainmenu"
-      "sidebar pagecontent";
-  }
-
-  #sidebar {
-    grid-area: sidebar;
-    overflow-y: auto;
-  }
-
-  .nav-general {
-    grid-area: mainmenu;
-  }
-
-  .homepage-container,
-  .post {
-    grid-area: pagecontent;
-    padding-left: 10px;
-    overflow-y: scroll;
-  }
-}
-
 /**
 * Sidebar style for most sizes
 */
@@ -62,56 +31,4 @@ body {
     text-decoration: none;
     line-height: 50px;
   }
-}
-
-#show-profile-button {
-  width: 100%;
-  display: block;
-  //margin-top: -10px;
-  text-align: center;
-  font-size: $font-size-navigation;
-  cursor: pointer;
-
-  p {
-    margin: 0 auto 0 auto;
-    width: 100%;
-    text-align: center;
-  }
-
-  @media screen and (min-width: $media-desktop) {
-    display: none;
-  }
-}
-
-/**
-* Style for main content in any device
-*/
-.homepage-container,
-.post {
-  padding: 10px 10px 0 10px;
-
-  img {
-    width: 90%;
-    //margin: -10px 0 0 0;
-    padding: 0;
-  }
-}
-
-/**
-* Style for homepage in any device
-*/
-.homepage-container {
-  ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-}
-
-.post-title {
-  margin-bottom: 0px;
-}
-
-.post-meta {
-  margin: 5px 0 5px 0;
-  font-size: 0.7em;
 }

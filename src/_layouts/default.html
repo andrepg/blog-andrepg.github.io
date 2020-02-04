@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-{% include header.html %}
+  {% include header.html %}
 
-<body id="main-body">
-  {% include navigation.html %}
-
-  {% include sidebar.html %}
-
-  {{ content }}
-
-  {% include footer.html %}
-</body>
-
-</html>
+  <body id="main-body">
+    {% include navigation.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
 
 </html>
