@@ -1,0 +1,64 @@
+#html-main-homepage {
+  background-color: $color-background-homepage;
+  z-index: 1;
+
+  &:before {
+    background: $image-background-homepage;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+  }
+}
+
+#homepage-navigation {
+  a {
+    color: orange;
+  }
+}
+
+#homepage-container {
+  text-align: center;
+  color: $color-text-homepage;
+
+  #profile-image {
+    border-radius: 50%;
+    max-height: 200px;
+  }
+
+  #profile-description {
+    font-size: $font-size-default;
+    max-width: 600px;
+    border-bottom: 2px dotted $color-white;
+    margin: auto;
+  }
+}
+
+#social-media-icons {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+
+  li {
+    padding: 2px 0 2px 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-768) {
+  #profile-description {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-768) {
+  #profile-description {
+    padding: 0 60px;
+  }
+
+  #social-media-icons {
+    li {
+      display: inline;
+    }
+  }
+}
