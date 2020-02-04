@@ -43,6 +43,7 @@ defaults:
   - scope:
       path: "_posts"
     values:
+      layout: blog
       permalink: "/blog/:year/:month/:title"
   - scope:
       path: "_pages"
