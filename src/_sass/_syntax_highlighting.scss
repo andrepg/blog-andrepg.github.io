@@ -5,7 +5,7 @@
 .highlight {
   background: #fff;
   overflow: auto;
-  //@extend %vertical-rhythm;
+  @extend %vertical-rhythm;
 
   .highlighter-rouge & {
     background: #eef;
