@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html id="html-pages" lang="pt_BR">
 {% include header.html %}
 
 <body id="blog-body">
 	{% include navigation.html %}
-	{{ content }}
+	<section id="page-contents">
+		{{ content }}
+	</section>
 	{% include footer.html %}
 </body>
 
