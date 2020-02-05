@@ -30,6 +30,22 @@ body {
   .page-link {
     text-decoration: none;
     line-height: 50px;
+
+    // Hover effects for desktop media
+    &::after {
+      content: "";
+      display: block;
+      margin: -5px auto 0 auto;
+      height: 2px;
+      width: 0px;
+      background: transparent;
+      transition: width 0.5s ease, background-color 0.5s ease;
+    }
+
+    &:hover:after {
+      width: 100%;
+      background: white;
+    }
   }
 }
 

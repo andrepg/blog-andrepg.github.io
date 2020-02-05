@@ -27,10 +27,14 @@
     max-height: 200px;
   }
 
+  #profile-name {
+    font-size: $font-size-default * 1.7;
+    margin-top: 10px;
+  }
+
   #profile-description {
-    font-size: $font-size-default;
+    font-size: $font-size-default * 1.2;
     max-width: 600px;
-    border-bottom: 2px dotted $color-white;
     margin: auto;
   }
 }
@@ -42,6 +46,13 @@
 
   li {
     padding: 2px 0 2px 0;
+    font-size: $font-size-default;
+    line-height: 2em;
+
+    a {
+      color: $color-orange;
+      text-decoration: none;
+    }
   }
 }
 
@@ -59,6 +70,17 @@
   #social-media-icons {
     li {
       display: inline;
+      filter: grayscale(1);
+      transition: 0.3s ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        filter: none;
+        transition: 0.3s ease-in-out;
+      }
     }
   }
 }
