@@ -23,7 +23,7 @@
   color: $color-text-homepage;
 
   @media screen and (min-width: $breakpoint-768) {
-    background: $color-background-homepage;
+    background: darken($color-background-homepage, 2%);
     padding: 20px;
     max-width: 650px;
     margin: auto;
@@ -39,6 +39,10 @@
   #profile-name {
     font-size: $font-size-default * 1.7;
     margin-top: 10px;
+  }
+
+  #profile-title {
+    margin-top: 0;
   }
 
   #profile-description {
