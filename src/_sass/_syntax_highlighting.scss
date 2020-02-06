@@ -2,6 +2,16 @@
  * Syntax highlighting styles
  */
 
+div.highlighter-rouge {
+  box-shadow: 2px 2px 15px -5px $color-purple;
+  border-radius: 10px;
+}
+
+div.highlight {
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
 .highlight {
   background: #fff;
   overflow: auto;

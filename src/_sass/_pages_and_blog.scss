@@ -1,4 +1,6 @@
-#html-pages {
+#html-pages,
+#html-blog,
+#html-post {
   background-color: $color-background-basic;
   z-index: 1;
 
@@ -6,7 +8,7 @@
     background: $image-background-homepage;
     position: fixed;
     height: 100%;
-    width: 100%;
+    width: 70px;
     content: "";
     z-index: -1;
     filter: brightness(0.4);
@@ -26,7 +28,9 @@
   }
 }
 
-#page-contents {
+#page-contents,
+#blog-content,
+#post-content {
   padding: 5px 10px;
   margin: auto;
   max-width: 768px;
