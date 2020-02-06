@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Sobre mim e este site
 ---
 

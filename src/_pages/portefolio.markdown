@@ -1,26 +1,24 @@
 ---
-layout: page
 title: Meu portefólio
 ---
 
-Estes são meus trabalhos.
-Os projetos que ainda estão online acompanham o link. Quando não, vou tentar colocar uma galeria.
+# Meu portefólio
 
-Meus contatos estão no perfil. Fale comigo 🤓
+Já trabalhei em alguns projetos internos e externos ao longo da carreira. Vou apresentar aqui aqueles que são públicos e/ou ainda estão acessíveis online.
 
-##### Website InfoMais Sistemas
+#### Website InfoMais Sistemas
 
 [`Acessar o projeto online`](https://infomaissistemas.com.br)
 
-##### Website Criativos Carlos Triginelli
+#### Website Criativos Carlos Triginelli
 
 [`Acessar o projeto online`](https://criativos.carlostriginelli.com.br)
 
-##### Website Rodrigo Ruas
+#### Website Rodrigo Ruas
 
 [`Acessar o projeto online`](https://rodrigoruas.overmaster.com.br)
 
-##### Repositório SuperCow
+#### Repositório OpenSource SuperCow
 
 O repositório **SuperCow** nasceu quando comecei a ter dificuldades para encontrar alguns scripts pela internet. Necessidades muito específicas que tive e acabei desenvolvendo minhas próprias soluções.
 
@@ -36,6 +34,6 @@ Algumas ferramentas disponíveis são:
 
 [`Acessar o projeto online`](https://github.com/andrepg/SuperCow)
 
-##### Website Overmaster
+#### Website Overmaster
 
 [`Acessar o projeto online`](https://overmaster.com.br)

@@ -2,7 +2,6 @@
 layout: post
 title:  "Reconstruindo meu tema GitHub Pages - Parte 1"
 date:   2020-01-15 19:27:47 -0300
-
 ---
 
 # Porquê resolvi criar este site?

@@ -1,0 +1,99 @@
+#html-main-homepage {
+  background-color: $color-background-homepage;
+  z-index: 1;
+
+  &:before {
+    background: $image-background-homepage;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    content: "";
+    z-index: -1;
+  }
+}
+
+#homepage-navigation {
+  a {
+    color: orange;
+  }
+}
+
+#homepage-container {
+  text-align: center;
+  color: $color-text-homepage;
+
+  @media screen and (min-width: $breakpoint-768) {
+    background: darken($color-background-homepage, 2%);
+    padding: 20px;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 0 20px -15px $color-white;
+  }
+
+  #profile-image {
+    border-radius: 50%;
+    max-height: 200px;
+  }
+
+  #profile-name {
+    font-size: $font-size-default * 1.7;
+    margin-top: 10px;
+  }
+
+  #profile-title {
+    margin-top: 0;
+  }
+
+  #profile-description {
+    font-size: $font-size-default * 1.2;
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+#social-media-icons {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+
+  li {
+    padding: 2px 0 2px 0;
+    font-size: $font-size-default;
+    line-height: 2em;
+
+    a {
+      color: $color-orange;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-768) {
+  #profile-description {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-768) {
+  #profile-description {
+    padding: 0 60px;
+  }
+
+  #social-media-icons {
+    li {
+      display: inline;
+      filter: grayscale(1);
+      transition: 0.3s ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        filter: none;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}

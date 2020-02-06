@@ -7,6 +7,17 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+
+  font-family: $font-family-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-title;
 }
 
 /**
@@ -30,5 +41,21 @@ body {
   .page-link {
     text-decoration: none;
     line-height: 50px;
+
+    // Hover effects for desktop media
+    &::after {
+      content: "";
+      display: block;
+      margin: -5px auto 0 auto;
+      height: 2px;
+      width: 0px;
+      background: transparent;
+      transition: width 0.5s ease, background-color 0.5s ease;
+    }
+
+    &:hover:after {
+      width: 100%;
+      background: white;
+    }
   }
 }

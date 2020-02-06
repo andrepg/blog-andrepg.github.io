@@ -1,0 +1,37 @@
+#html-pages,
+#html-blog,
+#html-post {
+  background-color: $color-background-basic;
+  z-index: 1;
+
+  &:before {
+    background: $image-background-homepage;
+    position: fixed;
+    height: 100%;
+    width: 70px;
+    content: "";
+    z-index: -1;
+    filter: brightness(0.4);
+  }
+
+  .nav-general {
+    background: $color-purple;
+
+    .page-link {
+      color: $color-white;
+
+      &:hover:after {
+        width: 100%;
+        background: $color-white;
+      }
+    }
+  }
+}
+
+#page-contents,
+#blog-content,
+#post-content {
+  padding: 5px 10px;
+  margin: auto;
+  max-width: 768px;
+}
