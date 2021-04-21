@@ -1,0 +1,55 @@
+$colorShadowElement: rgba(0, 0, 0, 0.25);
+$colorPurePurple: #800080;
+
+html {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+#container__profile {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding-top: 2rem;
+
+    .container__image {
+        width: 10rem;
+        margin: auto;
+        position: relative;
+        border-radius: 100px;
+        filter: drop-shadow(0 10px 15px $colorShadowElement);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        $border: 8px;
+        background-clip: padding-box;
+        border: solid $border transparent; 
+
+        img {
+            width: 100%;
+            border-radius: inherit;
+            box-sizing: border-box;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -$border; /* !importanté */
+            border-radius: inherit; /* !importanté */
+            background: linear-gradient(145deg, $colorPurePurple, lighten($colorPurePurple, 30%), $colorPurePurple);
+        }
+    }
+}
